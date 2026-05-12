@@ -1,27 +1,40 @@
-# BUG-001 Error Icons are Not Clickable and Do Not Clear the input fields
+# BUG-001 Checkout is Successful when the Cart is Empty
 
 ## Description 
-The error icons displayed next to the Username and Password fields are not clickable and do not clear the entered values.
+The user can complete the checkout process successfully with an empty cart.
+The successful confirmation message appears.
 
 ### Environment
 Chrome - Version 147.0.7727.55
 
 ### Pre-Conditions
-1. Open the application Sauce Demo (https://www.saucedemo.com)
+1. The user is logged in and on the Cart page (https://www.saucedemo.com/cart.html)
+2. The shopping cart is empty
 
 ### Steps to Reproduce
-1. Enter in the Username field: locked_out_user
-2. Enter in the Password field: secret_sauce
-3. Click on the 'Login' button
-4. Click the red error icon next to the Username field (or Password field)
+1. Click the 'Checkout' button
+2. Enter the valid data into the following fields: 
+- First Name
+- Last Name
+- Zip/Postal Code
+3. Click the 'Continue' button
+4. Click the 'Finish' button
+
+### Test Data
+username: standard_user
+password: secret_sauce
+First Name: Myname
+Last Name: Mylastname
+Zip/Postal Code: 123456
 
 ### Expected Result
-1. The red error icon schould be clickable
-2. Clicking the icon should clear the corresponding input field
+The user cannot complete the checkout process with an empty cart.
+The application keeps the user on the Cart page or prevents further checkout steps.
 
 ### Actual Result
-1. The red error icon is not clickable
-2. The Username and Password fields are not cleared
+1. The checkout process is completed successfully.
+2. The confirmation message appears: 
+"Thank you for your order! Your order has been dispatched, and will arrive just as fast as the pony can get there!"
 
 ### Severity
 Medium
