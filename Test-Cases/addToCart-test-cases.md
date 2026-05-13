@@ -1,6 +1,6 @@
 # Add to Cart Test Cases
 
-## TC001 Validate successful adding of a Product to the cart by a Logged-in User
+## TC-001 Validate successful adding of a Product to the cart by a Logged-in User
 
 ### Pre-Condtitions
 1. The user is logged in and on the Products page (https://www.saucedemo.com/inventory.html)
@@ -18,7 +18,7 @@ password: secret_sauce
 2. The shopping cart badge displays the correct number of added items.
 
 
-## TC002 Validate Error Message when navigating to the product page without logged in 
+## TC-002 Validate Error Message when navigating to the product page without logged in 
 
 ### Steps
 1. Navigate directly to the Products page using the URL  - https://www.saucedemo.com/inventory.html
@@ -28,7 +28,7 @@ password: secret_sauce
 2. The user remains on the Login page
 
 
-## TC003 Validate successful removal of a Product from the cart by a Logged-in User
+## TC-003 Validate successful removal of a Product from the cart by a Logged-in User
 
 ### Pre-Condtitions
 1. The user is logged in and on the Products page (https://www.saucedemo.com/inventory.html)
