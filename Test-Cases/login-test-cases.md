@@ -11,7 +11,7 @@
 3. Click on the 'Login' button
 
 ### Test Data
-username: standard_user
+username: standard_user,
 password: secret_sauce
 
 ### Expected Result
@@ -29,7 +29,7 @@ password: secret_sauce
 3. Click on the 'Login' button
 
 ### Test Data
-username: locked_out_user
+username: locked_out_user,
 password: secret_sauce
 
 ### Expected Result

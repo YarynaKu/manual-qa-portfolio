@@ -10,7 +10,7 @@
 2. Go to the Shopping Cart by clicking the cart icon (top right corner)
 
 ### Test Data
-username: standard_user
+username: standard_user,
 password: secret_sauce
 
 ### Expected Result
@@ -39,7 +39,7 @@ password: secret_sauce
 2. Go to the Shopping Cart by clicking the cart icon (top right corner)
 
 ### Test Data
-username: standard_user
+username: standard_user,
 password: secret_sauce
 
 ### Expected Result
