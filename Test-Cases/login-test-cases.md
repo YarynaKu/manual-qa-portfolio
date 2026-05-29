@@ -12,7 +12,7 @@
 4. Click 'Login' button
 
 ### Test Data
-Username: Admin
+Username: Admin;
 Password: admin123
 
 ### Expected Result
@@ -30,7 +30,7 @@ Employee account exists
 4. Click 'Login' button
 
 ### Test Data
-Username: IamEmployeeJohn
+Username: IamEmployeeJohn;
 Password: IAmEmployee123
 
 ### Expected Result
@@ -49,7 +49,7 @@ User account exists
 4. Click 'Login' button
 
 ### Test Data
-Username: Admin
+Username: Admin;
 Password: WrongPass
 
 ### Expected Result
