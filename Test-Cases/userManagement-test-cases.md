@@ -12,10 +12,10 @@ Admin logged in
 4. Click 'Save' button
 
 ### Test Data
-User Role: ESS
-Employee Name: joker john selvam
-Status: Enabled
-Username: IamEmployeeJohn
+User Role: ESS;
+Employee Name: joker john selvam;
+Status: Enabled;
+Username: IamEmployeeJohn;
 Password: IAmEmployee123
 
 ### Expected Result
