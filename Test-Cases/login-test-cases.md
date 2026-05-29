@@ -1,38 +1,56 @@
 # Login Test Cases
 
-## TC-001 Verify successful login with valid credentials
+## TC-LOGIN-001 Verify admin can login with valid credentials
 
 ### Pre-Condtitions
-1. The user is on the login page of Sauce Demo (https://www.saucedemo.com)
+1. Admin account exists
 
 ### Steps
-1. Enter standart_user in the Username field
-2. Enter secret_sauce in the Password field
-3. Click 'Login' button
+1. Open login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Enter valid admin username
+3. Enter valid password
+4. Click 'Login' button
 
 ### Test Data
-username: standard_user,
-password: secret_sauce
+Username: Admin
+Password: admin123
 
 ### Expected Result
-1. The user is logged in successfully
-2. Products page is displayed
+Admin dashboard should be displayed successfully
 
-## TC-002 Verify unsuccessful login for a locked-out user
+## TC-LOGIN-002 Verify employee can login with valid credetials
 
 ### Pre-Condtitions
-1. The user is on the login page of Sauce Demo (https://www.saucedemo.com)
+Employee account exists
 
 ### Steps
-1. Enter locked_out_user in the Username field
-2. Enter secret_sauce in the Password field
-3. Click 'Login' button
+1. Open login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Enter valid employee username
+3. Enter valid password
+4. Click 'Login' button
 
 ### Test Data
-username: locked_out_user,
-password: secret_sauce
+Username: IamEmployeeJohn
+Password: IAmEmployee123
 
 ### Expected Result
-1. The user is not logged.
-2. Error message is displayed: 'Epic sadface: Sorry, this user has been locked out.'
+Employee dashboard should be displayed successfully
 
+
+## TC-LOGIN-003 Verify error message for invalid password
+
+### Pre-Condtitions
+User account exists
+
+### Steps
+1. Open login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Enter valid username
+3. Enter invalid password
+4. Click 'Login' button
+
+### Test Data
+Username: Admin
+Password: WrongPass
+
+### Expected Result
+Error message: "Invalid credentials" is displayed
