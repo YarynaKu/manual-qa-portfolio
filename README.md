@@ -12,13 +12,13 @@ QA portfolio built around testing [OrangeHRM](https://opensource-demo.orangehrml
 - **`OrangeHRM/`** — per-module markdown excerpts of the test cases above, for easy browsing on GitHub without opening the spreadsheet. |
 | `Bug-Reports/` | Defect reports found while testing OrangeHRM |
 | `ai-workflow-examples/` | Concrete before/after examples of using AI to draft test cases, with the raw AI output and my reviewed/corrected version side by side |
-| `automation/playwright/` | Starter Playwright automation suite (Page Object Model) for the P0 smoke flows defined in the Test Strategy |
+| `automation/playwright/` | Starter Playwright automation suite (Page Object Model) for the P0 smoke flows defined in the Test Approach |
 | `.github/workflows/` | CI pipeline that runs the automated suite on push |
 | `checklist.xlsx` | Manual smoke checklist template used for quick cross-browser/device spot-checks |
 
 ## Current coverage snapshot
 
-The Test Strategy defines the target state across all OrangeHRM modules. Actual coverage so far:
+The Test Approach defines the target state across all OrangeHRM modules. Actual coverage so far:
 
 | Module | Status |
 |---|---|
