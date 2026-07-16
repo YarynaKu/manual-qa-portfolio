@@ -6,7 +6,7 @@ QA portfolio built around testing [OrangeHRM](https://opensource-demo.orangehrml
 
 | Folder | Contents |
 |---|---|
-| `docs/` | Test Strategy, Test Plan, Requirements Traceability Matrix |
+| `docs/` | Test Approach, Requirements Traceability Matrix |
 | `Test-Cases/` | 
 - **`Functional_TestSuite.xlsx`** — Test Suite Overview, per-module test case sheets, Test Data, Defect Log, Execution Summary. This is the source of truth for execution status.
 - **`OrangeHRM/`** — per-module markdown excerpts of the test cases above, for easy browsing on GitHub without opening the spreadsheet. |
