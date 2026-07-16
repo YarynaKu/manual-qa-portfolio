@@ -1,4 +1,4 @@
-# BUG-001-LOGIN 504 Gateway Time-out accurs after clicking 'Reset Password' on OrangeHRM login
+# BUG-001-LOGIN 504 Gateway Time-out occurs after clicking 'Reset Password' on OrangeHRM login
 
 ## Description 
 When a user attempts to reset their password using the 'Forgot Password' fuctionality, the system returns a 504 Gateway Time-out error.
