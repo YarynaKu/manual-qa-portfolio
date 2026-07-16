@@ -9,7 +9,6 @@ QA portfolio built around testing [OrangeHRM](https://opensource-demo.orangehrml
 | `docs/` | Test Strategy, Test Plan, Requirements Traceability Matrix |
 | `Test-Cases/` | 
 - **`Functional_TestSuite.xlsx`** — Test Suite Overview, per-module test case sheets, Test Data, Defect Log, Execution Summary. This is the source of truth for execution status.
-- **`checklist.xlsx`** — a lightweight cross-browser/device smoke checklist template per-module flow, used for quick manual spot-checks outside the formal scripted suite. 
 - **`OrangeHRM/`** — per-module markdown excerpts of the test cases above, for easy browsing on GitHub without opening the spreadsheet. |
 | `Bug-Reports/` | Defect reports found while testing OrangeHRM |
 | `ai-workflow-examples/` | Concrete before/after examples of using AI to draft test cases, with the raw AI output and my reviewed/corrected version side by side |
