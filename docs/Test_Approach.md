@@ -11,7 +11,7 @@
 
 ## 1. Purpose & scope
 
-This document describes how I approach testing OrangeHRM in this project: what I test, how I prioritize it, what tools I use, and how manual and automated testing fit together. 
+This document describes how I approach testing OrangeHRM demo in this project: what I test, how I prioritize it, what tools I use, and how manual and automated testing fit together. 
 
 **In Scope (current and planned):**
 - Authentication (login, logout, password reset)
@@ -28,7 +28,7 @@ This document describes how I approach testing OrangeHRM in this project: what I
  
 | Module | Status |
 |---|---|
-| Login / Authentication | Test cases + bug found |
+| Login / Authentication | Test cases + bug found + automated (Playwright) |
 | Logout | Test case |
 | User Management (Admin) | Test cases (including negative/authorization cases) |
 | Leave | Partial — apply/approve covered; entitlement & overlap edge cases added via AI-assisted design (see `ai-workflow-examples/`) plus blackout-period and overnight-shift cases (from OrangeHRM Help Center) written, execution pending |
@@ -45,16 +45,6 @@ Test cases are derived from two sources: the application's observed behavior, an
 **Caveat:** the Help Center covers OrangeHRM's full commercial product line, including paid add-ons (Onboarding Pro, Discipline Pro, Employee Voice, OKRs, audit trails) that aren't present in the free public demo. Before writing a test case from a Help Center article, I confirm the feature actually exists in `opensource-demo.orangehrmlive.com` — otherwise the test case would target something the AUT doesn't have, which isn't a real test. I use equivalence partitioning and boundary value analysis where they apply.
 
 Test cases live in `Functional_TestSuite.xlsx` (source of truth for IDs and execution status) with readable per-module excerpts in `Test-Cases/OrangeHRM/`.
-
-| Area | Focus |
-|---|---|
-| Authentication | Login, logout, forgot password, session timeout, role-based access |
-| PIM | Add/Edit/Delete employee, custom fields, attachments, reports |
-| Leave | Apply leave, approval workflows, leave balance calculations, overlapping leave rules |
-| Time | Timesheet submission/approval, attendance punch in/out, project time tracking |
-| Recruitment | Candidate creation, resume upload, pipeline stage transitions, interview scheduling |
-| Performance | Review cycle creation, KPI assignment, self/supervisor evaluation |
-| Admin | User role management, localization, configuration settings |
 
 **Techniques:** Equivalence partitioning, boundary value analysis, decision tables (e.g., leave entitlement rules), state transition testing (recruitment pipeline stages, review cycle states).
 

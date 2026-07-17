@@ -12,7 +12,7 @@ export default class LoginPage {
     this.passwordInput = page.getByPlaceholder('Password');
     this.loginButton = page.getByRole('button', { name: 'Login' });
     this.errorMessage = page.getByText('Invalid credentials');
-    this.dashboardHeader = page.getByText('Dashboard', { exact: true });
+    this.dashboardHeader = page.getByRole('heading', { name: 'Dashboard' });
   }
 
   async goto() {
