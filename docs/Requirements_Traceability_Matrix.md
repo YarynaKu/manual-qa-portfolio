@@ -11,9 +11,9 @@ Requirements below come from two kinds of sources, marked in the **Source** colu
 
 | Req ID | Requirement | Source | Test Case ID(s) | Automated? | Status |
 |---|---|---|---|---|---|
-| REQ-AUTH-01 | Valid users (Admin/ESS) can log in with correct credentials | App | TC-LOGIN-001, TC-LOGIN-002 | Playwright | Pass |
-| REQ-AUTH-02 | System rejects invalid credentials with a clear error message | App | TC-LOGIN-003 | Playwright | Pass |
-| REQ-AUTH-03 | Password reset request completes without server error | App | TC-LOGIN-005 | Manual | **Fail — BUG-001-LOGIN (504 timeout)** |
+| REQ-AUTH-01 | Valid users (Admin/ESS) can log in with correct credentials | App | TC-LOGIN-001 | Playwright | Pass |
+| REQ-AUTH-02 | System rejects invalid credentials with a clear error message | App | TC-LOGIN-002, TC-LOGIN-003, TC-LOGIN-004, TC-LOGIN-005 | Partial (Playwright/Manual) | Pass |
+| REQ-AUTH-03 | Password reset request completes without server error | App | TC-LOGIN-006 | Manual | **Fail — BUG-001-LOGIN (504 timeout)** |
 | REQ-AUTH-04 | User can log out and session is terminated | App | TC-LOGOUT-001 | Manual | Pass |
 
 ---
@@ -30,18 +30,6 @@ Requirements below come from two kinds of sources, marked in the **Source** colu
 | REQ-ADMIN-06 | Admin can add a new Job Title and it becomes selectable when adding/editing an employee | UG | TC-ADMIN-003 | Manual | Planned |
 | REQ-ADMIN-07 | Admin can add a Pay Grade and assign a currency to it | UG | TC-ADMIN-004 | Manual | Planned |
 | REQ-ADMIN-08 | Selected records can be bulk-deleted from a list view | UG | TC-ADMIN-005 | Manual | Planned |
-
----
-
-## On/Offboarding
-
-| Req ID | Requirement | Source | Test Case ID(s) | Automated? | Status |
-|---|---|---|---|---|---|
-| REQ-ONB-01 | Employee can view and act on tasks assigned to them (My Tasks) | UG | TC-ONB-001 | Manual | Planned |
-| REQ-ONB-02 | Task status/comment updates are saved and reflected in the task list | UG | TC-ONB-002 | Manual | Planned |
-| REQ-ONB-03 | Attachments can be uploaded against a task | UG | TC-ONB-003 | Manual | Planned |
-| REQ-ONB-04 | Event owner can view and filter events assigned to them (My Events) | UG | TC-ONB-004 | Manual | Planned |
-| REQ-ONB-05 | Event owner can bulk-update task owner/priority/due date across multiple employee tasks | UG | TC-ONB-005 | Manual | Planned |
 
 ---
 
@@ -81,15 +69,15 @@ Requirements below come from two kinds of sources, marked in the **Source** colu
 |---|---|---|---|---|---|
 | REQ-LEAVE-01 | Employee can submit a leave application | App | TC-LEAVE-001 | Manual | Pass |
 | REQ-LEAVE-02 | Admin/Supervisor can approve a submitted leave request | App | TC-LEAVE-002 | Manual | Pass |
-| REQ-LEAVE-05 | Leave application is blocked during a "Strict" blackout period | UG | TC-LEAVE-008 | Manual | Planned |
-| REQ-LEAVE-06 | Leave application allowed with a warning during a "Warning Only" blackout period | UG | TC-LEAVE-009 | Manual | Planned |
-| REQ-LEAVE-07 | Overnight-shift leave requests are visually distinguished | UG | TC-LEAVE-010 | Manual | Planned |
-| REQ-LEAVE-08 | Supervisor can assign leave directly to a subordinate | UG | TC-LEAVE-011 | Manual | Planned |
-| REQ-LEAVE-09 | Supervisor can approve/reject/cancel a multi-day leave request as a whole | UG | TC-LEAVE-012 | Manual | Planned |
-| REQ-LEAVE-10 | Supervisor can approve/reject a single day within a multi-day leave request via detail view | UG | TC-LEAVE-013 | Manual | Planned |
-| REQ-LEAVE-11 | Leave Calendar highlights overlapping team leave to prevent scheduling conflicts | UG | TC-LEAVE-014 |  Manual | Planned |
-| REQ-LEAVE-12 | Leave List can be filtered by employee, sub-unit, location, leave type, and status | UG | TC-LEAVE-015 | Manual | Planned |
-| REQ-LEAVE-13 | My Leave Usage report's Net Balance equals Available Balance minus Total Overdrawn | UG | TC-LEAVE-016 | Manual (boundary/calc) | Planned |
+| REQ-LEAVE-03 | Leave application is blocked during a "Strict" blackout period | UG | TC-LEAVE-008 | Manual | Planned |
+| REQ-LEAVE-04 | Leave application allowed with a warning during a "Warning Only" blackout period | UG | TC-LEAVE-009 | Manual | Planned |
+| REQ-LEAVE-05 | Overnight-shift leave requests are visually distinguished | UG | TC-LEAVE-010 | Manual | Planned |
+| REQ-LEAVE-06 | Supervisor can assign leave directly to a subordinate | UG | TC-LEAVE-011 | Manual | Planned |
+| REQ-LEAVE-07 | Supervisor can approve/reject/cancel a multi-day leave request as a whole | UG | TC-LEAVE-012 | Manual | Planned |
+| REQ-LEAVE-08 | Supervisor can approve/reject a single day within a multi-day leave request via detail view | UG | TC-LEAVE-013 | Manual | Planned |
+| REQ-LEAVE-09 | Leave Calendar highlights overlapping team leave to prevent scheduling conflicts | UG | TC-LEAVE-014 |  Manual | Planned |
+| REQ-LEAVE-10 | Leave List can be filtered by employee, sub-unit, location, leave type, and status | UG | TC-LEAVE-015 | Manual | Planned |
+| REQ-LEAVE-11 | My Leave Usage report's Net Balance equals Available Balance minus Total Overdrawn | UG | TC-LEAVE-016 | Manual (boundary/calc) | Planned |
 
 ---
 
@@ -103,5 +91,5 @@ Requirements below come from two kinds of sources, marked in the **Source** colu
 
 ## How to read this
 - **Source = App**: verified directly against the demo; safe to execute as written.
-- **Source = HC**: derived from a Help Center article, not yet confirmed against the demo. Before executing, check the module/feature actually exists as described — the Help Center covers OrangeHRM's full commercial line, and some sections here (On/Offboarding, Regional Admin) look like they may document add-ons or roles not present in the free public instance. 
+- **Source = UG**: derived from a Help Center article, not yet confirmed against the demo. Before executing, check the module/feature actually exists as described — the Help Center covers OrangeHRM's full commercial line, and some sections here (On/Offboarding, Regional Admin) look like they may document add-ons or roles not present in the free public instance. 
 - **Status = Planned** means the requirement is mapped and a Test Case ID has been reserved, but the test case has not yet been fully written or executed.
