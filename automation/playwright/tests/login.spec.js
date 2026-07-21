@@ -6,19 +6,20 @@ import LoginPage from '../pages/LoginPage';
 
 
 test.describe('Login - P0 smoke', () => {
-  test('TC-LOGIN-001: Admin can log in with valid credentials', async ({ page }) => {
-    const login = new LoginPage(page);
-    await login.goto();
-    await login.login('Admin', 'admin123');
+  let login;
 
+  test.beforeEach(async ({ page }) => {
+    login = new LoginPage(page);
+    await login.goto();
+  });
+
+  test('TC-LOGIN-001: Admin can log in with valid credentials', async ({ page }) => {
+    await login.login('Admin', 'admin123');
     await expect(login.dashboardHeader).toBeVisible();
   });
 
   test('TC-LOGIN-003: Invalid password shows an error message', async ({ page }) => {
-    const login = new LoginPage(page);
-    await login.goto();
     await login.login('Admin', 'WrongPass');
-
     await expect(login.errorMessage).toBeVisible();
   });
 });

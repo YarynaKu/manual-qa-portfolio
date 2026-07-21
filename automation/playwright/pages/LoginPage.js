@@ -11,8 +11,8 @@ export default class LoginPage {
     this.usernameInput = page.getByPlaceholder('Username');
     this.passwordInput = page.getByPlaceholder('Password');
     this.loginButton = page.getByRole('button', { name: 'Login' });
-    this.errorMessage = page.getByText('Invalid credentials');
-    this.dashboardHeader = page.getByRole('heading', { name: 'Dashboard' });
+    this.errorMessage = page.getByRole('alert').filter({ hasText: 'Invalid credentials' });
+    this.dashboardHeader = page.getByRole('heading').filter({ hasText: 'Dashboard'});
   }
 
   async goto() {
