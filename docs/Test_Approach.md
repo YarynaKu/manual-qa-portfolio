@@ -28,10 +28,10 @@ This document describes how I approach testing OrangeHRM demo in this project: w
  
 | Module | Status |
 |---|---|
-| Login / Authentication | Test cases + bug found + automated (Playwright) |
-| Logout | Test case |
+| Login / Authentication | Done - test cases, bug found, automated (Playwright) |
+| Logout | Done |
 | User Management (Admin) | Test cases (including negative/authorization cases) |
-| Leave | Partial — apply/approve covered; entitlement & overlap edge cases added via AI-assisted design (see `ai-workflow-examples/`) plus blackout-period and overnight-shift cases (from OrangeHRM Help Center) written, execution pending |
+| Leave | Partial — apply/approve covered; entitlement & overlap edge cases added via AI-assisted design (see `ai-workflow-examples/`) |
 | PIM, Time, Recruitment, Performance, Dashboard | Planned, not yet executed |
 | API | Planned, not yet executed |
 
@@ -49,7 +49,7 @@ Test cases live in `Functional_TestSuite.xlsx` (source of truth for IDs and exec
 **Techniques:** Equivalence partitioning, boundary value analysis, decision tables (e.g., leave entitlement rules), state transition testing (recruitment pipeline stages, review cycle states).
 
 ### 2.2 UI Testing
-Manual checks cover field validation, error messaging, and core interactive components (date pickers, dropdowns, modals). Cross-browser checking is currently a lightweight manual checklist (`checklist.xlsx`) rather than full automated visual regression.
+Manual checks cover field validation, error messaging, and core interactive components (date pickers, dropdowns, modals). 
 
 ### 2.3 Regression Testing
 As the automated suite grows, it doubles as the regression check: anything automated in `automation/playwright/` runs on every push via GitHub Actions. Everything not yet automated is re-checked manually before I consider a module "done" for this project.

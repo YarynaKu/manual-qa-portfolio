@@ -22,8 +22,8 @@ The Test Approach defines the target state across all OrangeHRM modules. Actual 
 
 | Module | Status |
 |---|---|
-| Login / Authentication | Test cases + bug report |
-| User Management (Admin) |  Test cases |
+| Login / Authentication | Done, automated |
+| User Management (Admin) |  Core done |
 | Logout, Leave, PIM, Time, Recruitment, Performance, Dashboard |  Planned — scoped in Test Strategy, not yet executed |
 
 ## Tools & AI workflow

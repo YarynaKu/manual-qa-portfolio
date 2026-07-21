@@ -28,10 +28,31 @@ Requirements below come from two kinds of sources, marked in the **Source** colu
 | REQ-ADMIN-04 | Admin can edit an existing user account and changes are saved | UG | TC-ADMIN-001 | Manual | Planned |
 | REQ-ADMIN-05 | User list can be filtered by username, role, status, and location | UG | TC-ADMIN-002 | Manual | Planned |
 | REQ-ADMIN-06 | Admin can add a new Job Title and it becomes selectable when adding/editing an employee | UG | TC-ADMIN-003 | Manual | Planned |
-| REQ-ADMIN-07 | Admin can add a Pay Grade and assign a currency to it | UG | TC-ADMIN-004 | Manual | Planned |
-| REQ-ADMIN-08 | Selected records can be bulk-deleted from a list view | UG | TC-ADMIN-005 | Manual | Planned |
 
 ---
+
+## Leave 
+
+| Req ID | Requirement | Source | Test Case ID(s) | Automated? | Status |
+|---|---|---|---|---|---|
+| REQ-LEAVE-01 | Employee can submit a leave application | App | TC-LEAVE-001 | Manual | Pass |
+| REQ-LEAVE-02 | Admin/Supervisor can approve a submitted leave request | App | TC-LEAVE-002 | Manual | Pass |
+| REQ-LEAVE-03 | Apply for leave exactly equal to available balance | App | TC-LEAVE-003 | Manual | Planned |
+| REQ-LEAVE-04 | Apply for leave exceeding available balance is blocked | App | TC-LEAVE-004 | Manual | Planned |
+| REQ-LEAVE-05 | Overlapping leave dates are rejected | App | TC-LEAVE-005 | Manual | Planned |
+| REQ-LEAVE-06 | Approved leave can be cancelled and balance is restored | App | TC-LEAVE-006 | Manual | Planned |
+| REQ-LEAVE-07 | End date before start date is rejected by validation | App | TC-LEAVE-007 | Manual | Planned |
+
+---
+
+## How to read this
+- **Source = App**: verified directly against the demo; safe to execute as written.
+- **Source = UG**: derived from a Help Center article, not yet confirmed against the demo. Before executing, check the module/feature actually exists as described — the Help Center covers OrangeHRM's full commercial line, and some sections here (On/Offboarding, Regional Admin) look like they may document add-ons or roles not present in the free public instance. 
+- **Status = Planned** means the requirement is mapped and a Test Case ID has been reserved, but the test case has not yet been fully written or executed.
+
+
+
+## Backlog (not yet verified against the demo)
 
 ## Employee Management (My Info / PIM-equivalent, ESS)
 
@@ -63,25 +84,7 @@ Requirements below come from two kinds of sources, marked in the **Source** colu
 
 ---
 
-## Leave (Supervisor-side additions)
-
-| Req ID | Requirement | Source | Test Case ID(s) | Automated? | Status |
-|---|---|---|---|---|---|
-| REQ-LEAVE-01 | Employee can submit a leave application | App | TC-LEAVE-001 | Manual | Pass |
-| REQ-LEAVE-02 | Admin/Supervisor can approve a submitted leave request | App | TC-LEAVE-002 | Manual | Pass |
-| REQ-LEAVE-03 | Leave application is blocked during a "Strict" blackout period | UG | TC-LEAVE-008 | Manual | Planned |
-| REQ-LEAVE-04 | Leave application allowed with a warning during a "Warning Only" blackout period | UG | TC-LEAVE-009 | Manual | Planned |
-| REQ-LEAVE-05 | Overnight-shift leave requests are visually distinguished | UG | TC-LEAVE-010 | Manual | Planned |
-| REQ-LEAVE-06 | Supervisor can assign leave directly to a subordinate | UG | TC-LEAVE-011 | Manual | Planned |
-| REQ-LEAVE-07 | Supervisor can approve/reject/cancel a multi-day leave request as a whole | UG | TC-LEAVE-012 | Manual | Planned |
-| REQ-LEAVE-08 | Supervisor can approve/reject a single day within a multi-day leave request via detail view | UG | TC-LEAVE-013 | Manual | Planned |
-| REQ-LEAVE-09 | Leave Calendar highlights overlapping team leave to prevent scheduling conflicts | UG | TC-LEAVE-014 |  Manual | Planned |
-| REQ-LEAVE-10 | Leave List can be filtered by employee, sub-unit, location, leave type, and status | UG | TC-LEAVE-015 | Manual | Planned |
-| REQ-LEAVE-11 | My Leave Usage report's Net Balance equals Available Balance minus Total Overdrawn | UG | TC-LEAVE-016 | Manual (boundary/calc) | Planned |
-
----
-
-## Not yet mapped (no source reviewed yet)
+## Not yet sourced
 - PIM/Time (timesheets, attendance, punch in/out)
 - Recruitment (candidates, vacancies)
 - Dashboard (widget data accuracy — partially touched via My Actions in the Employee Management article, not yet turned into test cases)
@@ -89,7 +92,3 @@ Requirements below come from two kinds of sources, marked in the **Source** colu
 
 ---
 
-## How to read this
-- **Source = App**: verified directly against the demo; safe to execute as written.
-- **Source = UG**: derived from a Help Center article, not yet confirmed against the demo. Before executing, check the module/feature actually exists as described — the Help Center covers OrangeHRM's full commercial line, and some sections here (On/Offboarding, Regional Admin) look like they may document add-ons or roles not present in the free public instance. 
-- **Status = Planned** means the requirement is mapped and a Test Case ID has been reserved, but the test case has not yet been fully written or executed.
