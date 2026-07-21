@@ -24,4 +24,9 @@ export default class LoginPage {
     await this.passwordInput.fill(password);
     await this.loginButton.click();
   }
+
+  async loginAndWaitForDasboard(username, password) {
+    await this.login(username, password);
+    await this.page.waitForURL(/dashboard/, { timeout: 15000 });
+  }
 }

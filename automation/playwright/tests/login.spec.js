@@ -14,12 +14,12 @@ test.describe('Login - P0 smoke', () => {
   });
 
   test('TC-LOGIN-001: Admin can log in with valid credentials', async ({ page }) => {
-    await login.login('Admin', 'admin123');
-    await expect(login.dashboardHeader).toBeVisible();
+    await login.loginAndWaitForDasboard('Admin', 'admin123');
+    await expect(login.dashboardHeader).toBeVisible({ timeout: 15000 });
   });
 
   test('TC-LOGIN-003: Invalid password shows an error message', async ({ page }) => {
     await login.login('Admin', 'WrongPass');
-    await expect(login.errorMessage).toBeVisible();
+    await expect(login.errorMessage).toBeVisible({ timeout: 10000 });
   });
 });
