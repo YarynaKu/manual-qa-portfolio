@@ -86,7 +86,7 @@ Error message should be displayed when an invalid password is entered
 | Module | Authentication |
 | Priority | High |
 | Test Type | Functional, Negative |
-| Automation | Manual |
+| Automation | Playwright |
 
 ### Title
 Error message should be displayed when an invalid username is entered
@@ -98,7 +98,7 @@ Error message should be displayed when an invalid username is entered
 
 | Field | Value |
 |---------|---------|
-| Username | User |
+| Username | WrongUser |
 | Password | admin123 |
 
 ### Test Steps
@@ -126,7 +126,7 @@ Error message should be displayed when an invalid username is entered
 | Module | Authentication |
 | Priority | High |
 | Test Type | Functional, Negative |
-| Automation | Manual |
+| Automation | Playwright |
 
 ### Title
 Hint message should be displayed when trying to login with an empty username
@@ -166,7 +166,7 @@ Hint message should be displayed when trying to login with an empty username
 | Module | Authentication |
 | Priority | High |
 | Test Type | Functional, Negative |
-| Automation | Manual |
+| Automation | Playwright |
 
 ### Title
 Hint message should be displayed when trying to login with an empty password
