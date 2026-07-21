@@ -12,6 +12,7 @@ export default class LoginPage {
     this.passwordInput = page.getByPlaceholder('Password');
     this.loginButton = page.getByRole('button', { name: 'Login' });
     this.errorMessage = page.getByRole('alert').filter({ hasText: 'Invalid credentials' });
+    this.hintMessage = page.getByText('Required');
     this.dashboardHeader = page.getByRole('heading').filter({ hasText: 'Dashboard'});
   }
 

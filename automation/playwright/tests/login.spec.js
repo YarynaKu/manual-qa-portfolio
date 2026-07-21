@@ -18,8 +18,25 @@ test.describe('Login - P0 smoke', () => {
     await expect(login.dashboardHeader).toBeVisible({ timeout: 15000 });
   });
 
-  test('TC-LOGIN-003: Invalid password shows an error message', async ({ page }) => {
+  test('TC-LOGIN-002: Invalid password shows an error message', async ({ page }) => {
     await login.login('Admin', 'WrongPass');
     await expect(login.errorMessage).toBeVisible({ timeout: 10000 });
   });
+
+  test('TC-LOGIN-003: Invalid username shows an error message', async ({ page }) => {
+    await login.login('WrongUser', 'admin123');
+    await expect(login.errorMessage).toBeVisible({ timeout: 10000 });
+  });
+
+  test('TC-LOGIN-004: Empty username show an error message', async ({ page }) => {
+    await login.login('', 'admin123');
+    await expect(login.hintMessage).toBeVisible();
+  });
+
+  test('TC-LOGIN-005: Empty password show an error message', async ({ page }) => {
+    await login.login('Admin', '');
+    await expect(login.hintMessage).toBeVisible();
+  });
+
+
 });
